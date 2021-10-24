@@ -4,5 +4,7 @@ jobs:
   linter:
     runs-on: ubuntu-latest
     steps:
-      - name: eslint-run
+      - name: npm install
+        run: make install
+      - name: eslint run
         run: make lint
