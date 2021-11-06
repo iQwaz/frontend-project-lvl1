@@ -6,3 +6,6 @@
 
 ### Linter status
 [![linter status](https://github.com/iQwaz/frontend-project-lvl1/actions/workflows/linter-status.yml/badge.svg)](https://github.com/iQwaz/frontend-project-lvl1/actions/workflows/linter-status.yml)
+
+### Asciinemas:
+- [Brain-even game asciinema](https://asciinema.org/a/4de1fkookuyg5NY2Ptg3OTMcV)
