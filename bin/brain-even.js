@@ -35,7 +35,7 @@ while ((rigthCounter < 3) && (wrongCounter < 3)) {
   }
   if (rigthCounter === 3) {
     console.log(`Congratulation, ${name}!`);
-  } else if (wrongCounter === 3) {
+  } else {
     console.log(`You lose, ${name}!`);
   }
 }
