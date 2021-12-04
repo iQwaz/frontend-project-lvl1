@@ -4,8 +4,7 @@ const description = 'What is the result of the expression?';
 
 const operators = ['+', '-', '*'];
 const getOperator = () => operators[(Math.floor(Math.random() * 3))];
-const getFirstNum = () => Math.floor(Math.random() * 10);
-const getSecondNum = () => Math.floor(Math.random() * 10);
+const getRandomInt = () => Math.floor(Math.random() * 10);
 
 const calculateExpression = (a, b, op) => {
   switch (op) {
@@ -21,8 +20,8 @@ const calculateExpression = (a, b, op) => {
 };
 
 const gameOptions = () => {
-  const firstNum = getFirstNum();
-  const secondNum = getSecondNum();
+  const firstNum = getRandomInt();
+  const secondNum = getRandomInt();
   const operator = getOperator();
   const question = `${firstNum} ${operator} ${secondNum}`;
   const correctAnswer = String(calculateExpression(firstNum, secondNum, operator));
