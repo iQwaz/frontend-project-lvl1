@@ -1,7 +1,9 @@
 import readlineSync from 'readline-sync';
 import greeting from './cli.js';
 
-const play = (gameParameters) => {
+export const getRandomInt = (maxInt) => Math.floor(Math.random() * maxInt);
+
+export const play = (gameParameters) => {
   const userName = greeting(); // Greeting and assign username
   const [description, gameOptions] = gameParameters;
   let gameRound = 0;
@@ -23,5 +25,3 @@ const play = (gameParameters) => {
   }
   console.log(`Congratulations, ${userName}!`);
 };
-
-export default play;

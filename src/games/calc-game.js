@@ -1,10 +1,9 @@
-import play from '../index.js';
+import { getRandomInt, play } from '../index.js';
 
 const description = 'What is the result of the expression?';
 
 const operators = ['+', '-', '*'];
-const getOperator = () => operators[(Math.floor(Math.random() * 3))];
-const getRandomInt = () => Math.floor(Math.random() * 10);
+const getOperator = () => operators[getRandomInt(operators.length)];
 
 const calculateExpression = (a, b, op) => {
   switch (op) {
@@ -20,8 +19,8 @@ const calculateExpression = (a, b, op) => {
 };
 
 const gameOptions = () => {
-  const firstNum = getRandomInt();
-  const secondNum = getRandomInt();
+  const firstNum = getRandomInt(10);
+  const secondNum = getRandomInt(10);
   const operator = getOperator();
   const question = `${firstNum} ${operator} ${secondNum}`;
   const correctAnswer = String(calculateExpression(firstNum, secondNum, operator));
