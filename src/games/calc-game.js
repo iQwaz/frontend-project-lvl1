@@ -28,4 +28,4 @@ const gameOptions = () => {
   return [question, correctAnswer];
 };
 
-play([description, gameOptions]);
+export default () => play([description, gameOptions]);
