@@ -11,11 +11,12 @@ const generateProgression = (initNum, step) => {
 };
 
 const getQuestionString = (arr, item) => {
-  let str = String(arr[0]);
-  for (let i = 1; i < arr.length; i += 1) {
-    str += (arr[i] === item) ? ' ..' : ` ${arr[i]}`;
+  const hiddenIndex = arr.indexOf(item);
+  let str = '';
+  for (let i = 0; i < arr.length; i += 1) {
+    str += (i === hiddenIndex) ? '.. ' : `${arr[i]} `;
   }
-  return str;
+  return str.trim();
 };
 
 const gameOptions = () => {
